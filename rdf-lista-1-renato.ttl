@@ -1,0 +1,84 @@
+@base <http://www.ufc.mdcc/2021/1/websemantica/resource/> .
+@prefix ufc_wso: <http://www.ufc.mdcc/2021/1/websemantica/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+# Usar prefixo pra definir o vocabulário.
+# Classes
+ufc_wso:Estudante rdf:type foaf:Person .
+ufc_wso:Professor rdf:type foaf:Person .
+ufc_wso:Disciplina rdf:type rdfs:Class .
+
+# Propriedades
+ufc_wso:temEstudante rdf:type rdf:Property .
+ufc_wso:temProfessor rdf:type rdf:Property .
+ufc_wso:ehProfessorEm rdf:type rdf:Property .
+ufc_wso:ensinaADisciplina rdf:type rdf:Property .
+ufc_wso:favoriteFood rdf:type rdf:Property .
+ufc_wso:favoriteMovie rdf:type rdf:Property .
+
+# Indivíduos Estudante
+<Renato_Freitas> rdf:type ufc_wso:Estudante;
+	foaf:title "Senhor" ;
+	foaf:firstName "Renato" ;
+	foaf:lastName "Freitas" ;
+	foaf:mbox "jrenatosfreitas@gmail.com" ;
+	foaf:homepage <https://github.com/renato-freitas/> ;
+	foaf:img <https://avatars.githubusercontent.com/u/36416299?v=4> ;
+	foaf:phone "(88)997341917" ;
+	foaf:knows <Vania_Vidal> ;
+	ufc_wso:favoriteFood <http://pt.dbpedia.org/resource/Banana> ;
+	ufc_wso:favoriteMovie <https://dbpedia.org/page/The_Wonder_Years> .
+<Washinton_Silva> rdf:type ufc_wso:Estudante ;
+	foaf:name "Washinton Silva" .
+<Tulio_Vidal> rdf:type ufc_wso:Estudante ;
+	foaf:name "Tulio_Vidal" .
+<Ronney_ns> rdf:type ufc_wso:Estudante ;
+	foaf:name "Ronney" .
+<Paulo_Cordeiro> rdf:type ufc_wso:Estudante ;
+	foaf:name "Paulo Cordeiro" .
+<Mateus_Navarro> rdf:type ufc_wso:Estudante ;
+	foaf:name "Mateus Navarro" .
+<Marcelo_Filho> rdf:type ufc_wso:Estudante ;
+	foaf:name "Marcelo Filho" .
+<Laura_Petrola> rdf:type ufc_wso:Estudante ;
+	foaf:name "Laura Petrola" .
+<Iel_Cordeiro> rdf:type ufc_wso:Estudante ;
+	foaf:name "Iel Cordeiro" .
+<Des_Gmail> rdf:type ufc_wso:Estudante ;
+	foaf:name "Des Gmail" .
+<Caio_Viktor> rdf:type ufc_wso:Estudante ;
+	foaf:name "Caio_Viktor" .
+	
+# Indivíduos Professor
+<Vania_Vidal> rdf:type ufc_wso:Professor ;
+	foaf:firstName "Vânia" ;
+	foaf:lastName "Vidal" ;
+	ufc_wso:ehProfessorEm <http://pt.dbpedia.org/resource/Categoria:Universidade_Federal_do_Cear%C3%A1>,
+								 <http://www.mdcc.ufc.br/component/content/article/34-fixo/360> ;
+	ufc_wso:ensinaADisciplina <https://dbpedia.org/page/Semantic_Web> ;
+	rdfs:seeAlso <https://cc.ufc.br/curso/corpo-docente/vvidal/> .
+	
+# Indivíduos Disciplina
+<Web_Semantica> rdf:type ufc_wso:Disciplina ;
+	foaf:name "Web Semântica"@pt ;
+	rdfs:seeAlso <https://dbpedia.org/page/Semantic_Web> ;
+	rdfs:seeAlso <https://ceweb.br/guias/web-semantica/capitulo-4/> ;
+	foaf:homepage <https://www.w3.org/standards/semanticweb/> ;
+	owl:sameAs <https://www.wikidata.org/wiki/Q54837> ;
+	ufc_wso:temEstudante <Renato_Freitas> ;
+	ufc_wso:temEstudante <Washinton_Silva> ;
+	ufc_wso:temEstudante <Tulio_Vidal> ;
+	ufc_wso:temEstudante <Ronney_ns> ;
+	ufc_wso:temEstudante <Paulo_Cordeiro> ;
+	ufc_wso:temEstudante <Mateus_Navarro> ;
+	ufc_wso:temEstudante <Marcelo_Filho> ;
+	ufc_wso:temEstudante <Laura_Petrola> ;
+	ufc_wso:temEstudante <Iel_Cordeiro> ;
+	ufc_wso:temEstudante <Des_Gmail> ;
+	ufc_wso:temEstudante <Caio_Viktor> ;
+	ufc_wso:temProfessor <Vania_Vidal> .
